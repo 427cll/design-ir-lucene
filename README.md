@@ -1,4 +1,4 @@
-# 项目环境配置
+# 项目启动步骤
 
 ## 框架选取
 
@@ -25,6 +25,8 @@ MySQL 建立数据库， 名为 `lucene`，执行 目录下的 `lucene.sql`  ，
 <img src="README.assets/image-20221021142245980.png" alt="image-20221021142245980" style="zoom: 67%;" />
 
 ### 二、Spring Boot 配置
+
+用 `IntelliJ IDEA` 打开`boot`文件夹，目录结构如下
 
 <img src="README.assets/image-20221021140724974.png" alt="image-20221021140724974" style="zoom:67%;" />
 
