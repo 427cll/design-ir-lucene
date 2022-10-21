@@ -6,7 +6,7 @@
 
 ## 前端配置
 
-:smiley: 需要 `Node.js` 运行环境以及 `npm` 包管理器
+:grinning: 需要 `Node.js` 运行环境以及 `npm` 包管理器
 
 打开 命令行，进入`quasar` 文件夹，`npm install` 安装依赖
 
@@ -17,6 +17,8 @@
 
 
 ## 后端配置
+
+:smile:推荐使用 `IntelliJ IDEA` 来启动
 
 ### 一、数据库配置
 
