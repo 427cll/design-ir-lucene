@@ -4,13 +4,13 @@
 
 `Vue.js` + `Quasar UI` + `Spring Boot`
 
-
-
 ## 前端配置
 
-打开 命令行，进入`quasar` 文件夹，`cnpm install` 安装依赖
+:smiley: 需要 `Node.js` 运行环境以及 `npm` 包管理器
 
-执行`quasar dev` 启动前端，弹出如下页面则启动成功
+打开 命令行，进入`quasar` 文件夹，`npm install` 安装依赖
+
+执行`npx quasar dev` 启动前端，弹出如下页面则启动成功
 
 <img src="README.assets/image-20221021142627977.png" alt="image-20221021142627977"  />
 
@@ -24,9 +24,11 @@ MySQL 建立数据库， 名为 `lucene`，执行 目录下的 `lucene.sql`  ，
 
 <img src="README.assets/image-20221021142245980.png" alt="image-20221021142245980" style="zoom: 67%;" />
 
+
+
 ### 二、Spring Boot 配置
 
-用 `IntelliJ IDEA` 打开`boot`文件夹，目录结构如下
+用 `IntelliJ IDEA` 打开`boot`文件夹，Maven会自动下载依赖，下载完成之后项目的目录如下
 
 <img src="README.assets/image-20221021140724974.png" alt="image-20221021140724974" style="zoom:67%;" />
 
@@ -46,29 +48,9 @@ MySQL 建立数据库， 名为 `lucene`，执行 目录下的 `lucene.sql`  ，
 
 > 管理功能：
 
-在管理页面进行**章节**<chapter>的增删改之后，索引库会自动更新响应的索引
+在管理页面进行**章节**<chapter>的增删改之后，**索引库会自动更新响应的索引**
 
 ![image-20221021154602531](README.assets/image-20221021154602531.png)
-
-```java
-@PostMapping
-public Result saveOrUpdateChapter(@RequestBody Chapter chapter) {
-    chapterService.saveOrUpdate(chapter);
-    //增加或修改索引
-    indexService.saveOrUpdateIndex(chapter);
-    return Result.success();
-}
-
-@DeleteMapping("{id}")
-public Result deleteChapter(@PathVariable Integer id) {
-    //删除索引
-    indexService.deleteIndex(id);
-    chapterService.removeById(id);
-    return Result.success();
-}
-```
-
-
 
 
 
